@@ -1,0 +1,5 @@
+D:/OOP/Blackjack/cmake-build-debug/CMakeFiles/Blackjack.dir
+D:/OOP/Blackjack/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/OOP/Blackjack/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+D:/OOP/Blackjack/cmake-build-debug/CMakeFiles/Blackjack_autogen_timestamp_deps.dir
+D:/OOP/Blackjack/cmake-build-debug/CMakeFiles/Blackjack_autogen.dir
