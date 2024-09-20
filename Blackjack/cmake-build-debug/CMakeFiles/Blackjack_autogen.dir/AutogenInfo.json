@@ -256,6 +256,13 @@
 	"HEADERS" : 
 	[
 		[ "D:/OOP/Blackjack/Card.h", "MU", "EWIEGA46WW/moc_Card.cpp", null ],
+		[ "D:/OOP/Blackjack/MCST.h", "MU", "EWIEGA46WW/moc_MCST.cpp", null ],
+		[
+			"D:/OOP/Blackjack/StartWindow.h",
+			"MU",
+			"EWIEGA46WW/moc_StartWindow.cpp",
+			null
+		],
 		[ "D:/OOP/Blackjack/ai.h", "MU", "EWIEGA46WW/moc_ai.cpp", null ],
 		[
 			"D:/OOP/Blackjack/blackjack.h",
@@ -336,6 +343,8 @@
 	"SOURCES" : 
 	[
 		[ "D:/OOP/Blackjack/Card.cpp", "MU", null ],
+		[ "D:/OOP/Blackjack/MCST.cpp", "MU", null ],
+		[ "D:/OOP/Blackjack/StartWindow.cpp", "MU", null ],
 		[ "D:/OOP/Blackjack/ai.cpp", "MU", null ],
 		[ "D:/OOP/Blackjack/blackjack.cpp", "MU", null ],
 		[ "D:/OOP/Blackjack/gui.cpp", "MU", null ],

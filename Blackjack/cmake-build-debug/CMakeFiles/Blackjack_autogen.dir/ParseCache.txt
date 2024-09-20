@@ -8,3 +8,7 @@ D:/OOP/Blackjack/gui.h
 D:/OOP/Blackjack/ai.cpp
 D:/OOP/Blackjack/blackjack.cpp
 D:/OOP/Blackjack/Card.cpp
+D:/OOP/Blackjack/StartWindow.h
+D:/OOP/Blackjack/StartWindow.cpp
+D:/OOP/Blackjack/MCST.h
+D:/OOP/Blackjack/MCST.cpp

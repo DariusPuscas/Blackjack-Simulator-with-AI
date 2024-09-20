@@ -1,17 +1,51 @@
-//
-// Created by User on 9/17/2024.
-//
-
 #include "gui.h"
 
 void GUI::init() {
 
-    //this->setStyleSheet("QWidget { background-color: #ffd700; }");
-    //btn_hit->setStyleSheet("QPushButton { background-color: #4CAF50; color: white; padding: 15px; border-radius: 10px; font-size: 18px; }");
-    //btn_stand->setStyleSheet("QPushButton { background-color: #F44336; color: white; padding: 15px; border-radius: 10px; font-size: 18px; }");
+  //  this->setStyleSheet("QWidget {"
+               //         "background-color: black;"
+              //          "}");
+    QLabel *background = new QLabel(this);
+    background->setPixmap(QPixmap(R"(D:\OOP\Blackjack\cards\casino.png)"));
+    background->setGeometry(0, 0, this->width(), this->height());
+    background->setScaledContents(true); // auto dimension
+    background->lower();
+    btn_hit->setStyleSheet("QPushButton {"
+                           "background-color: #ffcc00;"
+                           "border: 2px solid #e67e22;"
+                           "color: #2c3e50;"
+                           "font-size: 20px;"
+                           "border-radius: 10px;"
+                           "padding: 10px;"
+                           "}"
+                           "QPushButton:hover { background-color: #f39c12; }"
+                           "QPushButton:pressed { background-color: #e67e22; }");
+    btn_stand->setStyleSheet("QPushButton {"
+                             "background-color: #e74c3c;"
+                             "border-radius: 15px;"
+                             "color: white;"
+                             "font-size: 20px;"
+                             "padding: 10px;"
+                             "}"
+                             "QPushButton:hover { background-color: #c0392b; }"
+                             "QPushButton:pressed { background-color: #e74c3c; }");
 
-   // lbl_player_score->setStyleSheet("QLabel { font-size: 20px; color: black; }");
-   // lbl_ai_score->setStyleSheet("QLabel { font-size: 20px; color: black; }");
+    lbl_player_score->setStyleSheet("QLabel {"
+                                    "font-size: 26px;"
+                                    "font-weight: bold;"
+                                    "color: #ecf0f1;"
+                                    "background-color: rgba(0, 0, 0, 0.5);"
+                                    "padding: 5px;"
+                                    "border-radius: 10px;"
+                                    "}");
+    lbl_ai_score->setStyleSheet("QLabel {"
+                                "font-size: 26px;"
+                                "font-weight: bold;"
+                                "color: #ecf0f1;"
+                                "background-color: rgba(0, 0, 0, 0.5);"
+                                "padding: 5px;"
+                                "border-radius: 10px;"
+                                "}");
 
     deck = deckManager.create_deck();
     aiHand.push_back(deck.back());
@@ -96,7 +130,7 @@ void GUI::connect_signal() {
         }
     });
     QObject::connect(btn_stand,&QPushButton::clicked,[this](){
-        while (ai.aiDecide(aiHand,ai.calculateHandTotal(playerHand))) {
+        while (ai.aiDecide(aiHand,ai.calculateHandTotal(playerHand),difficulty)) {
             auto lbl = new QLabel;
             auto image_path = get_card_image(deck.back());
             QPixmap pixmap(image_path);
@@ -114,7 +148,26 @@ void GUI::connect_signal() {
 
         if (aiTotal > 21 || playerTotal > aiTotal) {
             auto msg = new QMessageBox;
-            msg->setText("You won");
+            //msg->addButton(,QMessageBox::ResetRole);
+            msg->setText("You win!");
+            msg->setInformativeText("Congratulations, you beat the AI!");
+            msg->setWindowTitle("Game Over");
+            msg->setStyleSheet("QMessageBox {"
+                                 "background-color: #2c3e50;"   // background
+                                 "color: #ecf0f1;"              // white
+                                 "border-radius: 10px;"
+                                 "padding: 10px;"
+                                 "}"
+                                 "QPushButton {"
+                                 "background-color: #f39c12;"
+                                 "border: 2px solid #e67e22;"
+                                 "border-radius: 10px;"
+                                 "color: white;"
+                                 "padding: 10px;"
+                                 "}"
+                                 "QPushButton:hover {"
+                                 "background-color: #e67e22;"
+                                 "}");
             msg->show();
         } else if (playerTotal < aiTotal) {
             auto msg = new QMessageBox;
@@ -134,7 +187,9 @@ void GUI::connect_signal() {
 void GUI::updateUI() {
 
     ly_player->addWidget(labels_player.back());
+  //  animateCard(labels_player.back());
     ly_ai->addWidget(labels_ai.back());
+  //  animateCard(labels_ai.back());
    // lbl_player_cards->setText(handToString(playerHand));
    // lbl_ai_cards->setText(handToString(aiHand));
 
@@ -188,4 +243,12 @@ void GUI::updateHandImages(const std::vector<Card>& hand, QLayout *layout) {
         layout->addWidget(cardLabel);
     }
 
+}
+
+void GUI::animateCard(QLabel *cardLabel) {
+    QPropertyAnimation* animation = new QPropertyAnimation(cardLabel, "geometry");
+    animation->setDuration(500);
+    animation->setStartValue(QRect(0, 0, 0, 0));  // poz init
+    animation->setEndValue(QRect(cardLabel->geometry()));  // poz end
+    animation->start(QAbstractAnimation::DeleteWhenStopped);
 }

@@ -1,6 +1,3 @@
-//
-// Created by User on 9/18/2024.
-//
 #include "Card.h"
 
 int Card::get_value() const {

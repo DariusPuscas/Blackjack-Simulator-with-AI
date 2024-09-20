@@ -1,7 +1,3 @@
-//
-// Created by User on 9/17/2024.
-//
-
 #include "blackjack.h"
 
 #include <utility>
@@ -83,7 +79,7 @@ void DeckManager::playGame() {
     // ai turn
     bool aiStand = false;
     while (!aiStand) {
-        int aiAction =ai.aiDecide(aiHand,ai.calculateHandTotal(playerHand));
+        int aiAction =ai.aiDecide(aiHand,ai.calculateHandTotal(playerHand),"easy");
 
         if (aiAction == 1) {  // AI  Hit
             aiHand.push_back(deck.back());

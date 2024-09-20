@@ -23,6 +23,10 @@ add_executable(Blackjack main.cpp
         gui.h
         Card.cpp
         Card.h
+        StartWindow.cpp
+        StartWindow.h
+        MCST.cpp
+        MCST.h
 )
 target_link_libraries(Blackjack
         Qt::Core
