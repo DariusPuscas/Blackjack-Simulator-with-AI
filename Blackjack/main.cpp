@@ -1,6 +1,8 @@
 #include <QApplication>
 #include "gui.h"
 #include "StartWindow.h"
+#include "FinalWindow.h"
+
 int main(int argc, char *argv[]) {
     QApplication a(argc, argv);
    // AI ai{};
@@ -13,5 +15,6 @@ int main(int argc, char *argv[]) {
    StartWindow window{};
    window.show();
    // deckManager.playGame(); // test game
+
     return QApplication::exec();
 }

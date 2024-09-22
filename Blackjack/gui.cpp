@@ -147,7 +147,7 @@ void GUI::connect_signal() {
         int aiTotal = ai.calculateHandTotal(aiHand);
 
         if (aiTotal > 21 || playerTotal > aiTotal) {
-            auto msg = new QMessageBox;
+        /*    auto msg = new QMessageBox;
             //msg->addButton(,QMessageBox::ResetRole);
             msg->setText("You win!");
             msg->setInformativeText("Congratulations, you beat the AI!");
@@ -168,18 +168,18 @@ void GUI::connect_signal() {
                                  "QPushButton:hover {"
                                  "background-color: #e67e22;"
                                  "}");
-            msg->show();
+            msg->show();*/
+            auto final = new FinalWindow{"You win!","Congratulations, you beat the AI!"};
+            final->show();
         } else if (playerTotal < aiTotal) {
-            auto msg = new QMessageBox;
-            msg->setText("AI won");
-            msg->show();
+            auto final = new FinalWindow{"AI won","Better luck next time!"};
+            final->show();
         } else {
-            auto msg = new QMessageBox;
-            msg->setText("Draw");
-            msg->show();
+            auto final = new FinalWindow{"Draw!",""};
+            final->show();
         }
 
-
+       // this->close();
 
     });
 }

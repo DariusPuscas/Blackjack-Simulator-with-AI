@@ -27,6 +27,8 @@ add_executable(Blackjack main.cpp
         StartWindow.h
         MCST.cpp
         MCST.h
+        FinalWindow.cpp
+        FinalWindow.h
 )
 target_link_libraries(Blackjack
         Qt::Core

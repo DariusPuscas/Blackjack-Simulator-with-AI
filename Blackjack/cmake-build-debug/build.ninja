@@ -113,6 +113,14 @@ build CMakeFiles/Blackjack.dir/MCST.cpp.obj: CXX_COMPILER__Blackjack_unscanned_D
   OBJECT_DIR = CMakeFiles\Blackjack.dir
   OBJECT_FILE_DIR = CMakeFiles\Blackjack.dir
 
+build CMakeFiles/Blackjack.dir/FinalWindow.cpp.obj: CXX_COMPILER__Blackjack_unscanned_Debug D$:/OOP/Blackjack/FinalWindow.cpp || cmake_object_order_depends_target_Blackjack
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\Blackjack.dir\FinalWindow.cpp.obj.d
+  FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  INCLUDES = -isystem D:/OOP/Blackjack/cmake-build-debug/Blackjack_autogen/include -isystem D:/QT/6.5.3/mingw_64/include/QtCore -isystem D:/QT/6.5.3/mingw_64/include -isystem D:/QT/6.5.3/mingw_64/mkspecs/win32-g++ -isystem D:/QT/6.5.3/mingw_64/include/QtGui -isystem D:/QT/6.5.3/mingw_64/include/QtWidgets
+  OBJECT_DIR = CMakeFiles\Blackjack.dir
+  OBJECT_FILE_DIR = CMakeFiles\Blackjack.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Blackjack
@@ -121,7 +129,7 @@ build CMakeFiles/Blackjack.dir/MCST.cpp.obj: CXX_COMPILER__Blackjack_unscanned_D
 #############################################
 # Link the executable Blackjack.exe
 
-build Blackjack.exe: CXX_EXECUTABLE_LINKER__Blackjack_Debug CMakeFiles/Blackjack.dir/Blackjack_autogen/mocs_compilation.cpp.obj CMakeFiles/Blackjack.dir/main.cpp.obj CMakeFiles/Blackjack.dir/blackjack.cpp.obj CMakeFiles/Blackjack.dir/ai.cpp.obj CMakeFiles/Blackjack.dir/gui.cpp.obj CMakeFiles/Blackjack.dir/Card.cpp.obj CMakeFiles/Blackjack.dir/StartWindow.cpp.obj CMakeFiles/Blackjack.dir/MCST.cpp.obj | D$:/QT/6.5.3/mingw_64/lib/libQt6Widgets.a D$:/QT/6.5.3/mingw_64/lib/libQt6Gui.a D$:/QT/6.5.3/mingw_64/lib/libQt6Core.a || Blackjack_autogen Blackjack_autogen_timestamp_deps
+build Blackjack.exe: CXX_EXECUTABLE_LINKER__Blackjack_Debug CMakeFiles/Blackjack.dir/Blackjack_autogen/mocs_compilation.cpp.obj CMakeFiles/Blackjack.dir/main.cpp.obj CMakeFiles/Blackjack.dir/blackjack.cpp.obj CMakeFiles/Blackjack.dir/ai.cpp.obj CMakeFiles/Blackjack.dir/gui.cpp.obj CMakeFiles/Blackjack.dir/Card.cpp.obj CMakeFiles/Blackjack.dir/StartWindow.cpp.obj CMakeFiles/Blackjack.dir/MCST.cpp.obj CMakeFiles/Blackjack.dir/FinalWindow.cpp.obj | D$:/QT/6.5.3/mingw_64/lib/libQt6Widgets.a D$:/QT/6.5.3/mingw_64/lib/libQt6Gui.a D$:/QT/6.5.3/mingw_64/lib/libQt6Core.a || Blackjack_autogen Blackjack_autogen_timestamp_deps
   FLAGS = -g
   LINK_LIBRARIES = D:/QT/6.5.3/mingw_64/lib/libQt6Widgets.a  D:/QT/6.5.3/mingw_64/lib/libQt6Gui.a  D:/QT/6.5.3/mingw_64/lib/libQt6Core.a  -lmpr  -luserenv  -ld3d11  -ldxgi  -ldxguid  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Blackjack.dir

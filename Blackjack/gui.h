@@ -8,6 +8,7 @@
 #include <QPropertyAnimation>
 #include <utility>
 #include "blackjack.h"
+#include "FinalWindow.h"
 
 
 class GUI:public QWidget{

@@ -2,6 +2,8 @@ Blackjack_autogen/timestamp: \
   D:/OOP/Blackjack/CMakeLists.txt \
   D:/OOP/Blackjack/Card.cpp \
   D:/OOP/Blackjack/Card.h \
+  D:/OOP/Blackjack/FinalWindow.cpp \
+  D:/OOP/Blackjack/FinalWindow.h \
   D:/OOP/Blackjack/MCST.cpp \
   D:/OOP/Blackjack/MCST.h \
   D:/OOP/Blackjack/StartWindow.cpp \
